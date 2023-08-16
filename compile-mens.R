@@ -12,7 +12,7 @@ rankings <- data.frame()
 
 for(i in dates){
   
-  url <- paste0("https://doubletakeout.com/api.php?t=women&d=",i)
+  url <- paste0("https://doubletakeout.com/api.php?t=men&d=",i)
   raw_json <- fromJSON(url)
   data <- raw_json$Player
   
@@ -23,4 +23,4 @@ for(i in dates){
 
 colnames(rankings)[1] <- 'Date'
 
-write_rds(rankings,'womensrankings.rds')
+write_rds(rankings,'mensrankings.rds')
