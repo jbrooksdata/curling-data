@@ -30,6 +30,6 @@ jobs:
           git add womens-rankings.rds
           git commit -m 'Data updated' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
-        with:
+        env:
           GITHUB_PAT: ${{secrets.GITHUB_TOKEN}}
           username: github-actions
