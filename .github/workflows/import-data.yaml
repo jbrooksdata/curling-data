@@ -3,7 +3,7 @@ on:
     branches: main
 
 jobs:
-  import-data:
+  compile-womens:
     runs-on: ubuntu-latest
     steps:
       - name: Set up R
@@ -30,6 +30,6 @@ jobs:
           git add womens-rankings.rds
           git commit -m 'Data updated' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
-        env:
-          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+        with:
+          GITHUB_PAT: ${{secrets.GITHUB_TOKEN}}
           username: github-actions
