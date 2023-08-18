@@ -23,4 +23,4 @@ for(i in dates){
 
 colnames(rankings)[1] <- 'Date'
 
-write_rds(rankings,'mensrankings.rds')
+write_rds(rankings,'mens-rankings.rds')
